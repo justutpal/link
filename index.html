@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apk file</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s;
+        }
+
+        body {
+            justify-content: center;
+        }
+
+        .display {
+            text-align: center;
+            margin-top: 75px;
+        }
+
+        .btn {
+            margin-top: 25px;
+        }
+
+        .container {
+            position: absolute;
+            top: 200px;
+            right: 25px;
+            display: none;
+            border: 5px solid black;
+            box-shadow: 0 0 100px black;
+            border-radius: 25px;
+            width: 75%;
+            padding: 50px 25px;
+            background-color: rgb(163, 162, 162);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        button {
+            padding: 15px 50px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .close {
+            float: right;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        @media only screen and (max-width: 500px) {
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .container {
+                padding: 25px;
+                right: 10px;
+            }
+
+            button {
+                padding: 10px 25px;
+                border-radius: 7px;
+            }
+
+            .close {
+                font-size: 35px;
+            }
+        }
+
+        @media only screen and (max-width: 300px) {
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .container {
+                padding: 20px 5px 20px 20px;
+                right: 0;
+                left: 0;
+                width: 100%;
+            }
+
+            button {
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+            .close {
+                font-size: 25px;
+            }
+        }
+
+        @media only screen and (max-width: 200px) {
+            .container {
+                padding: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 100px) {
+            body {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="display">
+        <h1>Click the button to download the APK</h1>
+        <button class="btn">Download APK</button>
+    </div>
+
+    <div class="container">
+        <span class="close">&times;</span>
+        <button class="button"><a href="lotus365.apk"> Click here for download</a></button>
+    </div>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let display = document.querySelector('.display');
+        let closeIt = document.querySelector('.close');
+        let container = document.querySelector('.container');
+
+        btn.addEventListener('click', () => {
+            container.style.display = 'block'
+            display.style.display = 'none'
+        })
+
+        closeIt.addEventListener('click', () => {
+            container.style.display = 'none'
+            display.style.display = 'block'
+
+        })
+    </script>
+
+</body>
+
+</html>
